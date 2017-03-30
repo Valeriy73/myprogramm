@@ -6,6 +6,13 @@ import os
 path = input("Введите путь к иследуемой папке с файлами: ")
 date_file = input("Дата последних изменений файлов: ")
 # Получаем перечень всех файло и папок
+list_file = list(os.walk(path))
+list1=[]
+for item_generly in list_file:
+	print(item_generly)
+	for file_item in item_generly[2]:
+		list1.append(file_item)
+print(list1)
 
 # Проходим по всем файлам каждой папки
 
